@@ -79,7 +79,7 @@ router
     } else {
       try {
         const { name, birthday, salary } = req.body;
-        const employee = await updateEmployee(id, name, birthday, salary);
+        const employee = await updateEmployee({ id, name, birthday, salary });
         if (employee === undefined) {
           return res.status(404).send("Employee does not exist.");
         }
