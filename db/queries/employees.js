@@ -52,8 +52,6 @@ export async function updateEmployee({ id, name, birthday, salary }) {
   RETURNING *
   `;
   const { rows: employee } = await db.query(SQL, [id, name, birthday, salary]);
-  console.log(employee[0]);
-  if (employee.length === 0) return undefined;
   return employee[0];
 }
 

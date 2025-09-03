@@ -45,7 +45,7 @@ describe('"employees" queries', () => {
         name: employee.name,
         birthday: expect.any(Date),
         salary: employee.salary,
-      }),
+      })
     );
   });
 
@@ -57,12 +57,13 @@ describe('"employees" queries', () => {
       salary: 100001,
     };
     const result = await updateEmployee(employee);
+    console.log(result, "dfsjalf");
     expect(result).toEqual(
       expect.objectContaining({
         name: employee.name,
         birthday: expect.any(Date),
         salary: employee.salary,
-      }),
+      })
     );
   });
 
